@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+include /usr/share/dpkg/architecture.mk
+export CROSS_COMPILE=$(DEB_HOST_GNU_TYPE)-
+
+override_dh_auto_clean:
+	dh_clean
+
+override_dh_auto_configure:
+	./configure --prefix=/usr
+
+override_dh_auto_install:
+	make PREFIX=/usr ETCDIR=/etc DESTDIR=$(CURDIR)/debian/netsniff-ng install
+
+override_dh_strip:
+	dh_strip --no-automatic-dbgsym
+
+override_dh_dwz:

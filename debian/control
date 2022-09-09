@@ -1,0 +1,30 @@
+Source: netsniff-ng
+Section: net
+Priority: optional
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+Build-Depends: bison,
+               debhelper-compat (= 13),
+               dpkg-dev (>= 1.16.1~),
+               flex,
+               libcli-dev,
+               libgeoip-dev,
+               libncurses5-dev,
+               libnet1-dev,
+               libnetfilter-conntrack-dev,
+               libnl-3-dev,
+               libnl-genl-3-dev,
+               libnl-route-3-dev,
+               libpcap-dev,
+               libsodium-dev,
+               liburcu-dev,
+               zlib1g-dev,
+Standards-Version: 4.6.0
+Homepage: http://netsniff-ng.org/
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/netsniff-ng.git
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/netsniff-ng
+
+Package: netsniff-ng
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: chrony
+Description: Linux network packet sniffer toolkit

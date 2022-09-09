@@ -1,0 +1,6 @@
+netsniff-ng (0.6.8-3kaisen) kaisen-packages; urgency=medium
+
+  * Complete repackaging to include chrony as default NTP server to use
+  * Simplification of the packaging
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Fri, 09 Sep 2022 13:40:24 +0100
